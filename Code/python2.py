@@ -33,7 +33,6 @@ import random
 
 
 def one(input):
-    working = input
     output = ""
 
     for char in input:
@@ -122,9 +121,8 @@ def three(a):
 
 def four(input1, input2):
     output = ""
-    inlen = len(input1)
 
-    for i in range(0, inlen):
+    for i in range(0, len(input1)):
         output += input1[i] + input2[i]
 
     return output
@@ -223,15 +221,13 @@ def seven(a, b, c):
 
 def eight(input, a):
 
-    word = input
-    ilen = len(word)
-    ans = int((ilen - a) / 2)
-    first = word[:ans]
-    second = word[ans+a:]
-    print(first)
-    print(second)
+    # word = input
+    # ilen = len(word)
+    # ans = int((len(input) - a) / 2)
+    # first = input[:ans]
+    # second = input[ans+a:]
 
-    return first + second
+    return input[:int((len(input) - a) / 2)] + input[int((len(input) - a) / 2)+a:]
 
 
 eight("Chocolate", 3)
@@ -251,17 +247,15 @@ eight("Chocolate", 3)
 # There are no hints for this question.
 
 def nine(string1, string2):
-    s1len = len(string1)
-    s2len = len(string2)
 
-    if s1len <= s2len:
-        for i in range(1, s1len):
+    if len(string1) <= len(string2):
+        for i in range(1, len(string1)):
             if string1[i] in string2:
                 return True
             else:
                 return False
-    elif s2len < s1len:
-        for i in range(1, s2len):
+    elif len(string2) < len(string1):
+        for i in range(1, len(string2)):
             if string2[i] in string1:
                 return True
             else:
