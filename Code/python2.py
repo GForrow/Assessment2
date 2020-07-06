@@ -198,7 +198,6 @@ def six(input):
 # Use the cli to access the documentation help(list.sort)
 
 def seven(a, b, c):
-
     numlist = [a, b, c]
     numlist.sort()
     if numlist[2] - numlist[1] == numlist[1] - numlist[0]:
@@ -223,8 +222,19 @@ def seven(a, b, c):
 # Use the cli to access the documentation help(str.replace)
 
 def eight(input, a):
-    return ""
 
+    word = input
+    ilen = len(word)
+    ans = int((ilen - a) / 2)
+    first = word[:ans]
+    second = word[ans+a:]
+    print(first)
+    print(second)
+
+    return first + second
+
+
+eight("Chocolate", 3)
 
 # <QUESTION 9>
 
@@ -241,11 +251,8 @@ def eight(input, a):
 # There are no hints for this question.
 
 def nine(string1, string2):
-
     s1len = len(string1)
     s2len = len(string2)
-
-    test = string2[1]
 
     if s1len <= s2len:
         for i in range(1, s1len):
@@ -277,4 +284,5 @@ def nine(string1, string2):
 # Think about nesting for loops.
 
 def ten(X, Y):
+
     return []
