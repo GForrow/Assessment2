@@ -287,7 +287,7 @@ def ten(X, Y):
 
     matrix = []
 
-    for i in range(0, Y):
+    for i in range(Y):
         matrix.append([])
 
         for j in range(X):
