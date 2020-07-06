@@ -285,4 +285,13 @@ def nine(string1, string2):
 
 def ten(X, Y):
 
-    return []
+    matrix = []
+
+    for i in range(0, Y):
+        matrix.append([])
+
+        for j in range(X):
+            matrix[i].append(j*i)
+
+    return matrix
+
