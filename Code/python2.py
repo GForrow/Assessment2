@@ -41,7 +41,6 @@ def one(input):
 	return output
 
 
-
 	# <QUESTION 2>
 
     #  Write a function which returns the boolean True if the input is only divisible by one and itself.
@@ -58,7 +57,22 @@ def one(input):
 	# Use your CLI to access the Python documentation and get help manipulating strings - help(range).
 
 def two(input):
-    return False
+
+	# catching low value inputs
+	if input <= 1:
+		return False
+	if input <= 3:
+		return True
+
+	if input > 1:
+		for i in range(2, input):
+			if (input % i) == 0:
+				return False
+			else:
+				return True
+	else:
+		return False
+
 
 	# <QUESTION 3>
 
