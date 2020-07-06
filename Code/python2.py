@@ -41,6 +41,7 @@ def one(input):
 	return output
 
 
+
 	# <QUESTION 2>
 
     #  Write a function which returns the boolean True if the input is only divisible by one and itself.
